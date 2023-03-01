@@ -1,0 +1,39 @@
+{
+  "name": "database",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "dotenv -e ../../.env -- tsup src/index.ts --dts",
+    "dev": "dotenv -e ../../.env -- tsup src/index.ts --dts --watch --onSuccess \"node dist/index.js\"",
+    "prebuild": "dotenv -e ../../.env -- npm run db:generate",
+    "predev": "dotenv -e ../../.env -- npm run db:generate",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "db:migrate:deploy": "dotenv -e ../../.env -- prisma migrate deploy",
+    "db:migrate:dev": "dotenv -e ../../.env -- prisma migrate dev",
+    "db:push": "dotenv -e ../../.env -- prisma db push",
+    "db:format": "dotenv -e ../../.env -- prisma format",
+    "db:generate": "dotenv -e ../../.env -- prisma generate",
+    "db:studio": "dotenv -e ../../.env -- prisma studio",
+    "db:seed": "dotenv -e ../../.env -- tsx src/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.10.1",
+    "dotenv-cli": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "eslint": "^7.32.0",
+    "eslint-config-custom-server": "*",
+    "prisma": "^4.10.1",
+    "tsconfig": "*",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "tsup src/server.ts --format cjs --watch --onSuccess \"node dist/server.js\"",
+    "build": "tsup src/server.ts --format cjs",
+    "start": "node dist/server.js",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "eslint \"src/**/*.ts*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^18.14.1",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-custom-server": "*",
+    "morgan": "^1.10.0",
+    "tsconfig": "*",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@trpc/server": "^10.12.0",
+    "cors": "^2.8.5",
+    "database": "*",
+    "express": "^4.18.2",
+    "load-env": "*",
+    "superjson": "^1.12.2",
+    "zod": "^3.20.6"
+  }
+}
