@@ -40,7 +40,9 @@ export function Logo(props: LogoProps) {
           fillRule="evenodd"
         />
       </svg>
-      <p className="ml-1.5 -mt-0.5 text-2xl font-bold text-gray-700">Portify</p>
+      <p className="ml-1.5 -mt-0.5 text-2xl font-bold text-gray-700 flex items-end">
+        Portify <span className="text-brand-600 ml-0.5"></span>
+      </p>
     </div>
   );
 }
