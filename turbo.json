@@ -15,9 +15,9 @@
   },
   "globalEnv": [
     "PORT",
-    "NEXT_PUBLIC_API_KEY",
     "NODE_ENV",
-    "NEXT_PUBLIC_BASE_API_URL",
-    "BASE_API_URL"
+    "NOTION_TOKEN",
+    "NOTION_DB_ID",
+    "NOTION_COL_EMAIL_ID"
   ]
 }

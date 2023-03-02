@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-display;
+  }
+  h2 {
+    @apply font-display;
+  }
+  h3 {
+    @apply font-display;
+  }
+
+  p {
+    @apply font-body;
+  }
+
+  /* ... */
+  body {
+    @apply antialiased selection:bg-brand-100 font-body font-normal text-gray-900;
+  }
+}
