@@ -71,7 +71,7 @@ export default function Index() {
       <Container>
         <div className="mt-24 flex items-start justify-between px-6">
           <div className="max-w-[620px] space-y-4">
-            <h1 className=" text-6xl font-black leading-tight">
+            <h1 className=" text-6xl font-extrabold leading-tight">
               Create Your Own Stunning Portfolio Effortlessly⚡️
             </h1>
             <p className="w-10/12 text-lg font-medium leading-relaxed text-gray-500">

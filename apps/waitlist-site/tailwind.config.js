@@ -11,8 +11,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      display: ["var(--font-inter), -apple-system, system-ui, sans-serif"],
-      body: ["var(--font-inter), -apple-system, system-ui, sans-serif"],
+      display: ["var(--font-lexend), -apple-system, system-ui, sans-serif"],
+      body: ["var(--font-lexend), -apple-system, system-ui, sans-serif"],
     },
   },
 };
