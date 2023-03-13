@@ -3,11 +3,12 @@ const { join } = require("path");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [join(__dirname, "./src/**/*.{js,ts,jsx,tsx}")],
   theme: {
     extend: {
       colors: {
-        brand: colors.emerald,
+        brand: colors.indigo,
       },
     },
     fontFamily: {

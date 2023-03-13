@@ -11,11 +11,16 @@ const lexend = Lexend_Deca({
   variable: "--font-lexend",
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className={`${lexend.variable}  `}>
+    <main className={`${lexend.variable}`}>
       <Component {...pageProps} />
-    </div>
+    </main>
   );
 };
 
